@@ -15,7 +15,8 @@ environment:
     LLVM_INSTALL_DIR: 'C:\Program Files\LLVM\bin'
     QTC_DISABLE_CLANG_REFACTORING: 1
     PYTHON_INSTALL_DIR: 'C:\Python38-x64'
-    QT_PATH: 'C:\Qt\5.14.1\msvc2017_64'
+    QT_MSVC_PATH: 'C:\Qt\5.14.1\msvc2017_64'
+    QT_PATH: 'C:\Qt\5.14.1'
       
 clone_script:
   - git clone --recursive https://code.qt.io/qt-creator/qt-creator.git
