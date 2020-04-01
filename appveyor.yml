@@ -26,4 +26,6 @@ install:
 
 build_script:
   - dir
-  - call qtcreator-win-builder\build.bat
+  - mkdir build
+  - cd build
+  - call %APPVEYOR_BUILD_FOLDER%\qtcreator-win-builder\build.bat
