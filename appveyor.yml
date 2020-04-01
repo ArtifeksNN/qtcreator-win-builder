@@ -27,4 +27,4 @@ build_script:
   - echo %VCVAR2017%
   - mkdir qt-creator-build
   - cd qt-creator-build
-  - cmd: %QT_PATH%/qmake.exe ../qt-creator/qtcreator.pro
+  - build.bat
