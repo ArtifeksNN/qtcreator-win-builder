@@ -22,4 +22,5 @@ install:
     - set
   
 build_script:
+- cmd: >-
     build.bat
