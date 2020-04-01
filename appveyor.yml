@@ -7,7 +7,6 @@ branches:
 os: Visual Studio 2019
 
 platform:
-- x86
 - x64
 
 environment:
@@ -19,3 +18,6 @@ clone_script:
     
 install:
 - set
+
+build:
+- cmd: 'build.bat'
