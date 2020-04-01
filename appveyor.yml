@@ -17,7 +17,7 @@ clone_script:
 - cmd: git clone --recursive https://code.qt.io/qt-creator/qt-creator.git
     
 install:
-- set
+  - set
 
-build:
-- cmd: 'build.bat'
+build_script:
+  - call build.bat
