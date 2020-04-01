@@ -22,4 +22,4 @@ install:
     - set
   
 build_script:
-    - '%APPVEYOR_BUILD_FOLDER%\ci\appveyor\build.bat'
+    - ci\appveyor\build.bat'
