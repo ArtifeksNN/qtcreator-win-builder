@@ -25,6 +25,4 @@ install:
   - set
 
 build_script:
-  - echo %CD%
-  - dir
   - call qtcreator-win-builder\build.bat
