@@ -19,6 +19,7 @@ environment:
       
 clone_script:
   - git clone --recursive https://code.qt.io/qt-creator/qt-creator.git
+  - git clone https://github.com/ArtifeksNN/qtcreator-win-builder.git
     
 install:
   - set
