@@ -1,0 +1,26 @@
+version: '{build}'
+
+branches:
+  only:
+    - master
+    
+os: Visual Studio 2019
+
+environment:
+  matrix:
+    - COMPILER: msys2
+      PLATFORM: x64
+      MSYS2_ARCH: x86_64
+      MSYS2_DIR: msys64
+      MSYSTEM: MINGW64
+      BIT: 64
+      BUILDTOOL: autoconf
+      
+clone_script:
+- cmd: >-
+    git clone https://code.qt.io/qt-creator/qt-creator.git
+    
+install:
+    - set
+  
+build_script:
