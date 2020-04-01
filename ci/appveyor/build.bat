@@ -2,24 +2,12 @@
 
 cd %APPVEYOR_BUILD_FOLDER%
 
-echo Compiler: %COMPILER%
-echo Architecture: %MSYS2_ARCH%
-echo Platform: %PLATFORM%
-echo MSYS2 directory: %MSYS2_DIR%
-echo MSYS2 system: %MSYSTEM%
-echo Configuration: %CONFIGURATION%
-echo Bits: %BIT%
+set LLVM_INSTALL_DIR=C:\Program Files\LLVM\bin
+set QTC_DISABLE_CLANG_REFACTORING=1
+set PYTHON_INSTALL_DIR=C:\Python38-x64
+set QT_PATH=C:\Qt\5.14.1\msvc2017_64
 
-IF %COMPILER%==msys2 (
-  @echo on
-  
-  SET "PATH=C:\%MSYS2_DIR%\%MSYSTEM%\bin;C:\%MSYS2_DIR%\usr\bin;%PATH%"
-  SET OPENSSL_LIBS='-LC:\%MSYS2_DIR%\%MSYSTEM%\lib -llibssl -llibcrypto'
-  SET _ROOT=%APPVEYOR_BUILD_FOLDER%\qt5
-  
-  md qtbuild
-  cd qtbuild
-    
-  %APPVEYOR_BUILD_FOLDER%\qt5\configure -prefix %CD%\qtbase -opensource -confirm-license -platform win32-g++ -c++std c++1z -release -shared -strip -opengl desktop -openssl-linked -no-icu -no-iconv -no-angle -no-dbus -nomake tools -nomake examples -nomake tests -skip qtwebengine -skip qtmultimedia -qt-zlib -qt-libpng -qt-libjpeg
-  mingw32-make -j4
-)
+mkdir qt-creator-build
+cd qt-creator-build
+
+cd QT_PATH/qmake.exe ../qt-creator/qtcreator.pro
