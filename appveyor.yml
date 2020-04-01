@@ -24,7 +24,7 @@ install:
   - set
 
 build_script:
-  - echo %VCVAR2017%
+  - echo %CD%
   - mkdir qt-creator-build
   - cd qt-creator-build
-  - build.bat
+  - call build.bat
