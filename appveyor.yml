@@ -19,5 +19,6 @@ clone_script:
     git clone --recursive https://code.qt.io/qt-creator/qt-creator.git
     
 install:
-  - set
-  - cmd: call "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Auxiliary\Build\vcvars64.bat"
+ - set
+ - cmd: >-
+  call "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Auxiliary\Build\vcvars64.bat"
