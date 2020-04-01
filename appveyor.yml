@@ -20,4 +20,4 @@ install:
   - set
 
 build_script:
-  - call build.bat
+  - echo %VCVAR2017%
